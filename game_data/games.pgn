@@ -1,0 +1,432 @@
+[Event "Web Game"]
+[Site "Local"]
+[Date "2026.02.08"]
+[Round "?"]
+[White "Human"]
+[Black "RandomBot"]
+[Result "1-0"]
+[Termination "checkmate"]
+[GameID "1"]
+
+1. e4 f5 2. Nc3 Nh6 3. g3 c5 4. Bg2 Ng8 5. Nge2 h5 6. O-O b5 7. exf5 e6 8. fxe6 Qg5 9. Nxb5 Be7 10. Bxa8 Qf5 11. exd7+ Kd8 12. Bg2 Qf3 13. Bxf3 Nxd7 14. Nxa7 Ndf6 15. Nxc8 Rh6 16. Nc3 Nd7 17. Ne4 Ke8 18. Nxe7 Rf6 19. Qe1 Rg6 20. Nxc5 Nxe7 21. d4 h4 22. Bf4 Nf6 23. Bc6+ Kf7 24. Qe6+ Kf8 25. Nd7+ Ke8 26. Nxf6+ Kd8 27. Qd7# 1-0
+
+[Event "Web Game"]
+[Site "Local"]
+[Date "2026.02.08"]
+[Round "?"]
+[White "Human"]
+[Black "RandomBot"]
+[Result "1-0"]
+[Termination "checkmate"]
+[GameID "2"]
+
+1. e4 Nh6 2. Nf3 Ng4 3. g3 f5 4. exf5 g5 5. fxg6 hxg6 6. Bg2 c6 7. O-O Qb6 8. Qe1 Qc7 9. d4 Bg7 10. c3 Na6 11. Nbd2 Rh4 12. Qe4 Rh3 13. Bxh3 Qb6 14. Bxg4 Qa5 15. Re1 Qxc3 16. Qxe7# 1-0
+
+[Event "Web Game"]
+[Site "Local"]
+[Date "2026.02.08"]
+[Round "?"]
+[White "Human"]
+[Black "RandomBot"]
+[Result "1-0"]
+[Termination "checkmate"]
+[GameID "3"]
+
+1. e4 e6 2. Nf3 Nh6 3. Nc3 Qg5 4. Nxg5 a5 5. g3 Ke7 6. Bg2 b5 7. O-O e5 8. Nd5+ Kd6 9. Nxf7+ Nxf7 10. d3 Ke6 11. Qg4+ Kd6 12. f4 c5 13. fxe5+ Nxe5 14. Qf5 Ra7 15. Bf4 Nc6 16. c4 Ne7 17. Bxe5+ Kc6 18. Nxe7+ Kb7 19. Nxc8 Be7 20. Qxd7+ Ka6 21. Qxa7# 1-0
+
+[Event "Web Game"]
+[Site "Local"]
+[Date "2026.02.08"]
+[Round "?"]
+[White "Human"]
+[Black "Human"]
+[Result "1-0"]
+[Termination "checkmate"]
+[GameID "4"]
+
+1. e4 e5 2. Nf3 f6 3. g3 d6 4. Bg2 Ne7 5. O-O g5 6. d3 Bg7 7. c4 O-O 8. Be3 c5 9. Nc3 Nbc6 10. b3 Be6 11. a4 a5 12. Qe1 Qd7 13. Nxg5 fxg5 14. Bxg5 Ng6 15. Nb5 h6 16. Bd2 Nce7 17. f4 exf4 18. gxf4 Nxf4 19. Bxf4 Ng6 20. Bxd6 Rxf1+ 21. Qxf1 Qxd6 22. Nxd6 Rf8 23. Qe1 Ne5 24. Nxb7 Nxd3 25. Qxa5 Nf4 26. Qxc5 Rc8 27. Qe7 Bf8 28. Qxe6+ Nxe6 29. Nd6 Bxd6 30. Rc1 h5 31. a5 Ra8 32. e5 Be7 33. Bxa8 Nc5 34. b4 Nd3 35. Bd5+ Kh7 36. Rd1 Nxb4 37. Be4+ Kh6 38. Rc1 Na2 39. a6 Bc5+ 40. Kg2 Nxc1 41. h3 h4 42. Kf3 Nb3 43. e6 Nd4+ 44. Kf4 Nxe6+ 45. Kg4 Ng7 46. Kxh4 Nf5+ 47. Bxf5 Bf2+ 48. Kg4 Kg7 49. h4 Bxh4 50. Kxh4 Kh8 51. a7 Kg8 52. a8=Q+ Kg7 53. Qd5 Kh8 54. Qe5+ Kg8 55. Be6+ Kf8 56. Qf6+ Ke8 57. Qf7+ Kd8 58. Qd7# 1-0
+
+[Event "Bot Training"]
+[Site "Local"]
+[Date "2026.02.08"]
+[Round "?"]
+[White "RandomBot-W"]
+[Black "RandomBot-B"]
+[Result "1/2-1/2"]
+[Termination "draw"]
+[GameID "5"]
+
+1. a4 Nh6 2. c3 d6 3. e3 g6 4. Bb5+ Bd7 5. Kf1 Na6 6. g3 e5 7. f4 Bc6 8. Ra3 Bg7 9. Bc4 Qf6 10. Kf2 Ke7 11. Be2 Nb4 12. c4 Nd3+ 13. Bxd3 Kf8 14. Rc3 Qe7 15. Na3 Nf5 16. fxe5 Qg5 17. Bc2 Bxh1 18. b3 Nxe3 19. Qh5 dxe5 20. Bd3 Bh6 21. Qf3 Nd5 22. b4 b6 23. Be2 Rg8 24. Qe3 Qxg3+ 25. Qxg3 Re8 26. Nb5 Ra8 27. Nd6 Nxb4 28. Qg2 Nd5 29. Qf1 a5 30. Bf3 Bg2 31. Kg3 Rd8 32. cxd5 Rh8 33. Qe1 Bxf3 34. Rd3 Bg7 35. Nh3 h6 36. Ra3 c6 37. Nf5 Kg8 38. d6 Bh5 39. Rf3 Re8 40. Qe2 Re7 41. Qd3 Rd7 42. Rf2 gxf5 43. Rf1 Bg4 44. Rh1 Rxd6 45. Kg2 h5 46. Nf2 Rf6 47. Qe2 Bf8 48. Qxg4+ fxg4 49. Rg1 Rf5 50. Rf1 c5 51. Nxg4 Rh7 52. Nf6+ Rxf6 53. Rd1 c4 54. d3 Rc6 55. Kh3 Rc8 56. Bf4 Re8 57. Rh1 f6 58. Kg2 Rh8 59. Bd2 Bh6 60. Rb1 Rf8 61. Rb2 Bg5 62. h4 f5 63. Bxa5 Re8 64. Kf1 Bd8 65. Kg2 Bg5 66. Rc2 Re7 67. Kh2 Kg7 68. Bxb6 Rf7 69. d4 Ra7 70. Re2 Kg6 71. Rb2 f4 72. Rg2 Rf7 73. Bc5 Rb8 74. hxg5 Rf5 75. Bb6 c3 76. Rf2 Rh8 77. Kh1 Re8 78. Kg1 e4 79. Kf1 Ref8 80. Ba7 R5f6 81. Kg1 Ra6 82. Kf1 Rd6 83. Bb8 f3 84. a5 Rc6 85. Bh2 h4 86. Bc7 Re6 87. Re2 Rb6 88. Rh2 Ra8 89. Ke1 f2+ 90. Kd1 Rbb8 91. Rxh4 Rxa5 92. Rh5 Rd5 93. Rh2 Rc5 94. Be5 e3 95. Bh8 Rc4 96. Bf6 Rc6 97. Ke2 Rd6 98. Kd1 Rb3 99. Bg7 Kxg5 100. Rh3 Kf5 101. Rh6 Rb5 102. Rh7 Ke6 103. Kc1 c2 104. Rh5 f1=N 105. d5+ Ke7 106. Rg5 Rc6 107. Rg6 Rb3 108. Rf6 Re6 109. dxe6 Rb2 110. Rf3 Ng3 111. Rf1 Rb5 112. Rf4 Rb7 113. Rb4 Rc7 114. Rc4 Ra7 115. Rc7+ Kxe6 116. Re7+ Rxe7 117. Ba1 Re8 118. Bd4 Ra8 119. Bf6 Kf7 120. Bb2 Rc8 121. Bh8 Ne2+ 122. Kb2 Rc5 123. Bc3 Nc1 124. Bf6 Kg8 125. Bg5 Ra5 126. Bh4 Ra3 127. Be1 Ra8 128. Kc3 Kh8 129. Kb2 Na2 130. Bh4 Nc3 131. Be1 c1=R 132. Bxc3+ Kg8 133. Kb3 Rd1 134. Bb4 Ra3+ 135. Bxa3 Ra1 136. Bb4 Rg1 137. Kb2 Kf7 138. Bd6 Rg5 139. Be5 Rh5 140. Bc3 Rh4 141. Kc1 Rh2 142. Bg7 Ke7 143. Ba1 Rh5 144. Kb2 Re5 145. Kb1 Kd6 146. Ka2 Re6 147. Kb2 Re5 148. Kc2 e2 149. Kb3 Rd5 150. Ka3 Kd7 151. Kb4 Kc6 152. Kc4 Kb6 153. Bd4+ Kb7 154. Bf6 Rd7 155. Kc5 e1=R 156. Bg7 Ka8 157. Bb2 Rd2 158. Bf6 Rg1 159. Kb4 Rc1 160. Bd4 Rb1+ 161. Bb2 Kb8 162. Ka4 Rd6 163. Ba3 Rb4+ 164. Ka5 Rbb6 165. Bb4 Rd2 166. Bf8 Ra6+ 167. Kxa6 Kc8 168. Bd6 Rg2 169. Bc7 Rg5 170. Bb6 Ra5+ 171. Kxa5 1/2-1/2
+
+[Event "Bot Training"]
+[Site "Local"]
+[Date "2026.02.08"]
+[Round "?"]
+[White "RandomBot-W"]
+[Black "RandomBot-B"]
+[Result "1-0"]
+[Termination "checkmate"]
+[GameID "6"]
+
+1. Nh3 Na6 2. Na3 g6 3. Nb1 d5 4. f3 Bf5 5. g3 Nc5 6. g4 g5 7. b3 Ne6 8. Nxg5 Nd4 9. b4 Nf6 10. Bb2 Rc8 11. a3 Ra8 12. Bh3 a5 13. f4 Bg7 14. Bg2 Bg6 15. Rf1 Ra6 16. Ra2 Qa8 17. Ba1 Rb6 18. Ne4 Qa7 19. Bb2 Rxb4 20. Ng3 e6 21. c3 Nb5 22. axb4 Na3 23. h4 axb4 24. cxb4 Ke7 25. Bxd5 c5 26. Bxa3 cxb4 27. h5 bxa3 28. d4 exd5 29. Nh1 Kd7 30. Rb2 Kd6 31. Rg1 Bc2 32. Rg3 Rd8 33. Rf3 Qa6 34. Rxc2 a2 35. Rg3 Qa3 36. Rh3 Nxg4 37. Rc4 Ke6 38. Rg3 h6 39. e4 Nf6 40. Rb4 Qa4 41. exd5+ Kd6 42. Qd3 Ng4 43. Qe3 axb1=Q+ 44. Kd2 Kd7 45. Rb3 Kd6 46. Qe6+ Kc7 47. Qg6 Qaa1 48. Ra3 Qc1+ 49. Kd3 Rd6 50. Qxd6+ Kc8 51. Ke4 Qc2+ 52. Kf3 b5 53. Qf6 Qab1 54. Ra6 Qd2 55. Ra2 Qa5 56. d6 Qa6 57. Ra5 Nf2 58. Qg6 Kb8 59. Qxg7 Qxh1+ 60. Ke2 Qg1 61. Rg6 Nd3 62. Qf6 Nb2 63. Rg2 Ka8 64. Ra2 Qa4 65. Rg6 Qa1 66. Rg8+ Kb7 67. Qg7 Qb3 68. Qf6 Qh1 69. Qg7 Qe3+ 70. Kxe3 Qb1 71. d5 Qd1 72. Ra3 Na4 73. Qe5 Qb1 74. Qf6 Qh7 75. Qh8 Nc3 76. f5 Ne4 77. Ke2 Qg7 78. Ke1 Nc3 79. Re8 Qd4 80. Rc8 f6 81. Qh7+ Kxc8 82. Ra8# 1-0
+
+[Event "Bot Training"]
+[Site "Local"]
+[Date "2026.02.08"]
+[Round "?"]
+[White "RandomBot-W"]
+[Black "RandomBot-B"]
+[Result "1/2-1/2"]
+[Termination "stalemate"]
+[GameID "7"]
+
+1. h4 d6 2. Nc3 e5 3. Nb5 g5 4. Nh3 Qf6 5. Rh2 Bh6 6. d3 Be6 7. Nxc7+ Kd7 8. Be3 Qf3 9. c3 Qxe2+ 10. Kxe2 e4 11. Qc1 gxh4 12. c4 Ke7 13. Nf4 Bg5 14. Qc2 Bxf4 15. Qd2 a5 16. Re1 h5 17. a3 Bc8 18. Rxh4 Nf6 19. Qb4 Rh7 20. Nd5+ Kd7 21. Bxf4 Ng8 22. Ne3 Nf6 23. Rh2 Rg7 24. Qxd6+ Ke8 25. Bg5 Rh7 26. dxe4 Nc6 27. Nd5 Ne5 28. Rh4 Nxc4 29. Qd7+ Bxd7 30. Rh2 Bg4+ 31. f3 Ne3 32. Nb4 Bxf3+ 33. Kxe3 Rb8 34. Rh3 Kd8 35. Na2 Kc7 36. Ra1 Kc8 37. g3 Kd7 38. Rc1 Kd8 39. Bc4 Bg2 40. e5 Kd7 41. Rf1 Kc8 42. Rh4 Ra8 43. Rf3 b5 44. Be2 Ra6 45. g4 Rh6 46. Rh2 Rc6 47. Rxh5 Bh1 48. Rf4 Bd5 49. Bxb5 Rc2 50. Rf2 Be4 51. Rh4 Rxf2 52. b4 Bh1 53. Rh2 Rxa2 54. Bxh6 Rg2 55. Kd3 Ra2 56. Rf2 Nd5 57. e6 Rb2 58. Rd2 Be4+ 59. Kd4 f5 60. Rg2 Bc2 61. Bd3 a4 62. Bxf5 Ne3 63. e7+ Nxf5+ 64. Kd5 Ng7 65. Rg1 Bh7 66. Kd4 Rd2+ 67. Ke5 Rd6 68. Kf4 Kb7 69. e8=R Bd3 70. Ke3 Rb6 71. Rb1 Ba6 72. g5 Bc4 73. Kf3 Rxb4 74. Re6 Kc7 75. Re7+ Kd6 76. Re4 Bb5 77. Rbe1 Rb2 78. Rf1 Kc6 79. Kg4 Kc7 80. g6 Rb1 81. Rff4 Nf5 82. Re6 Ng7 83. Rf8 Rc1 84. Rc8+ Kd7 85. Rb8 Bc6 86. Kf4 Rc5 87. Rb2 Nf5 88. Re5 Rc3 89. Rbb5 Kd8 90. Kxf5 Bf3 91. Bg7 Rc7 92. Ke6 Rc5 93. Rg5 Rc6+ 94. Ke5 Re6+ 95. Kf5 Kc7 96. Rb7+ Kc8 97. Rh5 Re1 98. Re7 Kd8 99. Kf6 Re6+ 100. Kg5 Bc6 101. Rh4 Kxe7 102. Kg4 Rxg6+ 103. Kh5 Bb7 104. Rd4 Ra6 105. Rh4 Kd7 106. Re4 Rf6 107. Re5 Rf3 108. Re1 Ba6 109. Rb1 Ke8 110. Rh1 Bf1 111. Rg1 Kf7 112. Kh6 Bg2 113. Rxg2 Rf4 114. Rg1 Ke8 115. Bh8 Rf2 116. Bb2 Kd8 117. Bc3 Rf3 118. Re1 Kd7 119. Ba5 Rb3 120. Bb4 Re3 121. Bd6 Re6+ 122. Kh7 Re5 123. Kg8 Rc5 124. Bg3 Rc1 125. Kg7 Kd8 126. Kf6 Rd1 127. Bh2 Rd7 128. Bd6 Re7 129. Bxe7+ Ke8 130. Rd1 1/2-1/2
+
+[Event "Bot Training"]
+[Site "Local"]
+[Date "2026.02.08"]
+[Round "?"]
+[White "RandomBot-W"]
+[Black "RandomBot-B"]
+[Result "1/2-1/2"]
+[Termination "draw"]
+[GameID "8"]
+
+1. h4 Nh6 2. e4 e6 3. b3 f5 4. Ne2 c6 5. g4 Bd6 6. d4 g6 7. Bd2 Qg5 8. Bh3 Qh5 9. Kf1 Qxh4 10. Na3 Qxh3+ 11. Rxh3 Bg3 12. gxf5 d6 13. Qb1 g5 14. Bf4 exf5 15. Rh1 g4 16. Rh4 Nd7 17. Bxd6 b5 18. Ke1 Ne5 19. c3 Bxf2+ 20. Kxf2 Rg8 21. Bc5 Be6 22. Qb2 Bd7 23. Nf4 Rh8 24. Ne6 Rd8 25. b4 Kf7 26. Rc1 Kf6 27. Nc4 Bc8 28. Nf8 Rg8 29. Qd2 a6 30. Nxh7+ Kg6 31. d5 g3+ 32. Kg2 Bb7 33. Bb6 cxd5 34. exf5+ Kf7 35. Bd4 Nhg4 36. Bc5 Rc8 37. Nxe5+ Ke8 38. Ng6 Rb8 39. Qh6 Rd8 40. Bg1 Rc8 41. a3 a5 42. Rb1 Bc6 43. Nhf8 Rxg6 44. Kxg3 Rxh6 45. Rxg4 Rh2 46. a4 Rg2+ 47. Kf4 Ra8 48. Rxg2 Bb7 49. Kg5 Ra6 50. Nd7 d4 51. Rf2 Rb6 52. Kh4 bxa4 53. Rd2 Bg2 54. Rxd4 Rh6+ 55. Kg4 Rg6+ 56. fxg6 Bc6 57. Rd5 Ba8 58. Be3 Bb7 59. Rg1 Bc8 60. Rf5 Kxd7 61. Rf4 Ke6 62. b5 Kd6+ 63. Kh5 Bd7 64. Rgg4 Bxb5 65. g7 Be2 66. Bf2 Kc6 67. Bg1 a3 68. Re4 Bf3 69. Re3 Kb5 70. Kg6 Ka6 71. Rb4 Bh1 72. Bh2 Bg2 73. Rh3 Ba8 74. Rb5 Be4+ 75. Kh5 Bh7 76. Bb8 Bf5 77. Bd6 Bc8 78. Rh2 Bb7 79. Rh3 Bh1 80. Bb8 Bb7 81. Kg4 Bc6 82. Rb4 Bh1 83. Kh5 Bg2 84. Rb7 a4 85. Bh2 Bxh3 86. Rb6+ Ka7 87. Bd6 a2 88. Rb2 a1=N 89. Kg6 Bf1 90. Rf2 Be2 91. Kf7 Kb6 92. Rf5 Bg4 93. Rh5 Nc2 94. Rb5+ Kc6 95. Rc5+ Kb7 96. g8=B Bh3 97. Ke8 Nb4 98. Rf5 Kc6 99. Re5 Na6 100. Ra5 Kb7 101. Be5 Nb8 102. Ba2 Nd7 103. Bf4 a3 104. Be3 Be6 105. Rxa3 Bg4 106. c4 Kc8 107. Bb3 Kb8 108. Ra8+ Kc7 109. Rd8 Nf6+ 110. Ke7 Ne4 111. Ba7 Bd1 112. Ba2 Ba4 113. Kf7 Nd6+ 114. Kg7 Nxc4 115. Bxc4 Kb7 116. Ba2 Bc2 117. Rc8 Kxc8 118. Bc4 Kb7 119. Ba6+ Kxa7 1/2-1/2
+
+[Event "Bot Training"]
+[Site "Local"]
+[Date "2026.02.08"]
+[Round "?"]
+[White "RandomBot-W"]
+[Black "RandomBot-B"]
+[Result "1/2-1/2"]
+[Termination "draw"]
+[GameID "9"]
+
+1. b3 Nh6 2. e4 d5 3. a4 Ng4 4. Ne2 e5 5. Ba3 Bb4 6. f3 Kf8 7. h4 Bxa3 8. d3 c5 9. Nd4 Nf6 10. Rh3 Qb6 11. Nd2 Kg8 12. Be2 cxd4 13. Rh2 Bh3 14. Rb1 Bc8 15. Qc1 Qe6 16. h5 Bd7 17. g4 Qa6 18. g5 Bxa4 19. Qxa3 Bxb3 20. Qc1 Ba2 21. Bf1 Bb3 22. Rb2 Nbd7 23. g6 Qb6 24. f4 Qa5 25. Bh3 Ne8 26. h6 b5 27. Rb1 fxg6 28. c4 Qa2 29. Bxd7 Qa1 30. Bxe8 Kf8 31. hxg7+ Ke7 32. exd5 a5 33. Rh1 h5 34. gxh8=N Rxe8 35. Nxg6+ Kf7 36. Rf1 h4 37. Nf3 Re6 38. Nh2 Bd1 39. Nf3 Qa4 40. Kd2 Re8 41. Ngxh4 Rg8 42. Nf5 Bc2 43. Ng5+ Ke8 44. d6 Qb4+ 45. Kxc2 Rh8 46. Qa3 Rh5 47. Nh7 Qb2+ 48. Rxb2 a4 49. Rb3 Rh1 50. Qa1 Rh3 51. Rh1 Rxh1 52. Ng3 b4 53. Qf1 Rh2+ 54. Ne2 Rh4 55. Rb1 b3+ 56. Kc1 Rh2 57. fxe5 Rh6 58. Kd2 Rg6 59. Rd1 b2 60. Nc3 Rg8 61. Qf6 Rg5 62. Nb5 Rg3 63. Kc2 Kd7 64. Rf1 b1=N 65. Qg5 Rg4 66. Rxb1 Re4 67. Qg8 Rh4 68. Qd5 Rh6 69. Re1 Rh2+ 70. Kd1 Kd8 71. Qg8+ Kd7 72. c5 Rd2+ 73. Kc1 Rh2 74. Re3 Re2 75. Qd5 Re1+ 76. Kb2 Rh1 77. Qa8 Rxh7 78. Qf8 Rh5 79. Nxd4 a3+ 80. Kc1 Rh7 81. Re1 Rh3 82. Qg7+ Kc8 83. Nb5 Rh2 84. Qg8+ Kb7 85. Qg1 a2 86. Qe3 Rh5 87. Qf3+ Ka6 88. Qe3 a1=Q+ 89. Kc2 Rxe5 90. Qe2 Qa2+ 91. Kd1 Qc4 92. Na3 Qb5 93. Kc2 Ka7 94. Nxb5+ Ka6 95. Qf3 Re7 96. Qg3 Rb7 97. Rh1 Rf7 98. Rh4 Rh7 99. Kb2 Rh8 100. Rf4 Rf8 101. Nd4 Re8 102. Qh4 Kb7 103. Rf6 Rd8 104. Rf2 Rd7 105. Qe7 Ka6 106. Qe6 Rf7 107. c6 Kb6 108. Kc1 Rf4 109. Rf1 Rf5 110. Qg8 Rd5 111. Kd1 Kc5 112. Rf2 Kb4 113. Ke1 Rxd4 114. Ra2 Rh4 115. Qg4+ Rxg4 116. Rh2 Rg8 117. Rh4+ Kb3 118. c7 Kb2 119. c8=R Rxc8 120. Kd2 Rc4 121. Rh3 Rf4 122. Kd1 Kb3 123. Rg3 Ka4 124. Rg4 Rxg4 125. Kc1 Rg1+ 126. Kd2 Ra1 127. d7 Re1 128. Kxe1 Kb4 129. d8=N Kc5 130. Ke2 Kd4 131. Kd2 Ke5 132. Ke3 Kd6 133. Kf3 Ke7 134. Ke3 Kd7 135. Nc6 Kc8 136. Ne5 Kb7 137. Nc4 Kc7 138. d4 Kc6 139. Nb6 Kd6 140. Nd7 Ke7 141. Nb6 Kf6 142. Nd7+ Kg6 143. Ke4 Kh7 144. Kf5 Kh6 145. d5 Kh7 146. Ke6 Kg7 147. Nc5 Kf8 148. d6 Ke8 149. Kf5 Kf8 150. Kg4 Kf7 151. Kh5 Kf8 152. Kg5 Kg7 153. Ne6+ Kh7 154. Kh5 Kh8 155. Ng7 Kh7 156. Ne8 Kg8 157. Nf6+ Kf7 158. d7 Kg7 159. Nd5 Kf7 160. Kh6 Ke6 161. Nb6 Kd6 162. Nc8+ Kc6 163. Nd6 Kxd7 1/2-1/2
+
+[Event "Web Game"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "Human"]
+[Black "ReiLea"]
+[Result "1-0"]
+[Termination "checkmate"]
+[GameID "10"]
+
+1. e4 d5 2. exd5 Be6 3. dxe6 Qxd2+ 4. Qxd2 b6 5. Nc3 b5 6. Nxb5 a6 7. Nxc7# 1-0
+
+[Event "Web Game"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Human"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "11"]
+
+1. c4 b6 2. a4 Bb7 3. f3 Nc6 4. d4 Nf6 5. Ra3 d5 6. Be3 dxc4 7. d5 Nxd5 8. Bd2 e6 9. Bh6 gxh6 10. h4 Qf6 11. Rh2 O-O-O 12. g3 Qxb2 13. Rf2 Ba6 14. Rh2 c3 15. Rf2 c2 16. Rh2 cxd1=Q+ 17. Kxd1 Qxb1+ 18. Kd2 Qxf1 19. Rf2 Nf4+ 20. Rd3 Qxf2 21. Rd6 Rxd6+ 22. Kc2 Qxg1 23. Kb2 Qd1 24. gxf4 Qd2+ 25. Ka1 Rd3 26. f5 Qc2 27. exd3 Qxd3 28. f6 Ba3 29. f4 Qc2 30. f5 Qb2# 0-1
+
+[Event "Web Game"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "Human"]
+[Black "ReiLea"]
+[Result "1-0"]
+[Termination "checkmate"]
+[GameID "12"]
+
+1. e4 b6 2. Nf3 a6 3. g3 c6 4. Bg2 Bb7 5. O-O d6 6. d3 Kd7 7. Nc3 Kc8 8. Be3 Kc7 9. e5 dxe5 10. Nxe5 Nf6 11. Nxf7 Ne4 12. Nxd8 Nf6 13. Nxb7 Ne4 14. Nxe4 Nd7 15. Bf4+ Kxb7 16. Qf3 Nf6 17. Nxf6 exf6 18. Qxc6+ Ka7 19. Qb7# 1-0
+
+[Event "Web Game"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "Human"]
+[Black "ReiLea"]
+[Result "1-0"]
+[Termination "checkmate"]
+[GameID "13"]
+
+1. Nf3 b6 2. g3 a6 3. Bg2 c6 4. Ne5 Bb7 5. Nc3 d6 6. Nc4 Kd7 7. d4 Kc8 8. Be3 Kc7 9. d5 Nf6 10. dxc6 Ne4 11. Nxe4 Kxc6 12. Nexd6+ Kd7 13. Nxb7+ Kc8 14. Nxd8 Kc7 15. Bxa8 Nd7 16. Bf4+ Kxd8 17. Bc6 Ke8 18. Qxd7# 1-0
+
+[Event "ReiLea vs SF"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish-10"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "14"]
+
+1. g3 e5 2. d4 e4 3. Nc3 f5 4. d5 Bb4 5. Bg2 Bxc3+ 6. Qd2 Bxd2+ 7. Kd1 Bxc1 8. h4 Bh6 9. Ke1 Qf6 10. Kd1 Qxb2 11. Ke1 Qxa1# 0-1
+
+[Event "ReiLea vs SF"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish-10"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "15"]
+
+1. g3 e5 2. d4 exd4 3. Bg2 Nc6 4. Nf3 Bb4+ 5. Nc3 dxc3 6. h4 cxb2+ 7. Qd2 Bxd2+ 8. Kxd2 bxa1=Q 9. Kd3 Nb4+ 10. Ke4 f5+ 11. Kxf5 Qaf6+ 12. Kg4 d5+ 13. Kh5 Qf7# 0-1
+
+[Event "ReiLea vs SF"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish-10"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "16"]
+
+1. g3 e5 2. d4 exd4 3. Bg2 Bb4+ 4. Nc3 dxc3 5. h4 cxb2+ 6. Qd2 bxc1=R+ 7. Rxc1 Bxd2+ 8. Kxd2 d6 9. Kd3 Ke7 10. g4 c6 11. c4 Qa5 12. Rh3 Nd7 13. f3 Qa3+ 14. Ke4 Qxc1 15. f4 Nh6 16. f5 Nxg4 17. f6+ Ngxf6+ 18. Kf5 Nb6# 0-1
+
+[Event "ReiLea vs SF"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish-10"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "17"]
+
+1. g3 e5 2. d4 exd4 3. Bg2 Bb4+ 4. Nc3 dxc3 5. h4 cxb2+ 6. Qd2 Bxd2+ 7. Kxd2 bxa1=Q 8. Kd3 Qdf6 9. Be3 Qac3+ 10. Ke4 Qcc6+ 11. Kd3 Qb5+ 12. c4 Qbb2 13. Bf4 Qb1+ 14. Ke3 Qc3# 0-1
+
+[Event "ReiLea vs SF"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish-10"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "18"]
+
+1. g3 e5 2. d4 e4 3. Nc3 Bb4 4. d5 Bxc3+ 5. bxc3 f5 6. Bg2 d6 7. Nf3 exf3 8. Rg1 Qe7 9. Be3 f4 10. h4 fxe3 11. Qc1 exf2+ 12. Kd1 fxg1=R+ 13. Kd2 Qxe2# 0-1
+
+[Event "ReiLea vs SF"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish-10"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "19"]
+
+1. g3 e5 2. d4 e4 3. Nc3 d5 4. Bg2 c6 5. h4 Nf6 6. f3 Bb4 7. f4 O-O 8. f5 c5 9. Be3 Qa5 10. Bf4 Bxc3+ 11. Qd2 Bxd2+ 12. Kd1 Bxf4 13. c4 Qd2# 0-1
+
+[Event "ReiLea vs SF"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish-10"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "20"]
+
+1. g3 e5 2. d4 exd4 3. Bg2 Nf6 4. Nc3 dxc3 5. Nf3 d5 6. e3 Bc5 7. h4 Qe7 8. Rh3 h6 9. Rh1 Nc6 10. Rh3 a5 11. Rh1 O-O 12. Rg1 d4 13. Qd2 cxd2+ 14. Kd1 dxc1=Q+ 15. Kxc1 dxe3 16. b3 exf2 17. Ng5 fxg1=R+ 18. Kb2 Bd4+ 19. c3 Qe2+ 20. Ka3 Rxa1 21. g4 hxg5 22. h5 Qxa2# 0-1
+
+[Event "ReiLea vs SF"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish-10"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "21"]
+
+1. g3 e5 2. d4 d6 3. d5 c6 4. h4 Qa5+ 5. Nc3 Nf6 6. Bg2 Nxd5 7. f3 Nxc3 8. f4 Nxd1+ 9. c3 Nxb2 10. Rh2 Qxc3+ 11. Bd2 Qxg3+ 12. Kf1 Nc4 13. f5 Nxd2# 0-1
+
+[Event "ReiLea vs SF"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish-10"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "22"]
+
+1. g3 e5 2. d4 exd4 3. Bg2 d5 4. Nf3 Bb4+ 5. Nc3 dxc3 6. e3 cxb2+ 7. Ke2 bxa1=Q 8. c4 Qaf6 9. h4 Qa6 10. Rh3 Bf5 11. Qe1 Qxc4+ 12. Kd1 Qc2# 0-1
+
+[Event "ReiLea vs SF"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish-10"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "23"]
+
+1. g3 e5 2. d4 e4 3. Nc3 Nf6 4. d5 a5 5. Bg2 Bb4 6. Nf3 Bxc3+ 7. Qd2 Bxd2+ 8. Kd1 Bxc1 9. h4 d6 10. b3 exf3 11. Ke1 fxg2 12. Rh3 g1=R# 0-1
+
+[Event "ReiLea vs SF"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish-10"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "24"]
+
+1. g3 e5 2. d4 exd4 3. Bg2 Nc6 4. Nf3 Bc5 5. h4 Nf6 6. Nc3 dxc3 7. Be3 Be7 8. Bf4 d5 9. e3 O-O 10. Qc1 h6 11. b3 Bd6 12. Rg1 a5 13. Kd1 Ra6 14. Ke1 a4 15. Qd1 Be7 16. Qc1 Bg4 17. Qd1 Re8 18. Qc1 d4 19. h5 d3 20. Qa3 Bxa3 21. Kd1 dxc2+ 22. Ke1 axb3 23. Ng5 c1=Q+ 24. Rxc1 b2 25. f3 bxc1=R+ 26. Ke2 Qd2# 0-1
+
+[Event "ReiLea vs SF"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish-10"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "25"]
+
+1. g3 e5 2. d4 exd4 3. Bg2 Nf6 4. Nc3 dxc3 5. Nf3 d6 6. e3 g6 7. h4 Bg7 8. O-O Nc6 9. Qe1 O-O 10. b3 a5 11. Ng5 h6 12. g4 a4 13. a3 Nxg4 14. Bf3 Ra6 15. Qd1 Nge5 16. Qd2 axb3 17. Qd4 b2 18. Qd5 bxa1=R 19. Bb2 Rxf1+ 20. Kxf1 cxb2 21. Kg2 Qf6 22. Kg3 hxg5 23. Qxd6 Qxf3+ 24. Kh2 Ng4+ 25. Kg1 Qxf2+ 26. Kh1 b1=R+ 27. Qd1 Qf3+ 28. Kg1 Bd4 29. Qc1 Bxe3# 0-1
+
+[Event "ReiLea vs SF"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish-10"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "26"]
+
+1. g3 e5 2. d4 exd4 3. Bg2 Nc6 4. Nf3 Nf6 5. Nc3 dxc3 6. h4 d5 7. Ng5 Bc5 8. a3 Bb6 9. Be3 h6 10. f3 cxb2 11. Rh3 bxa1=R 12. Qc1 Ba5+ 13. c3 Bxc3+ 14. Kd1 Rxc1+ 15. Kxc1 Qe7 16. f4 Qxe3+ 17. Kd1 Qd2# 0-1
+
+[Event "ReiLea vs SF"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish-10"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "27"]
+
+1. g3 e5 2. d4 d6 3. d5 c6 4. h4 f5 5. Bg2 h6 6. Nc3 Nf6 7. Ne4 fxe4 8. Rh2 Be7 9. Be3 cxd5 10. Bf4 d4 11. Qc1 d5 12. b3 exf4 13. c4 Nbd7 14. Qe3 dxe3 15. Rc1 exf2+ 16. Kd2 Qa5+ 17. b4 Qxa2+ 18. Rc2 Qb1 19. Rc3 fxg1=Q 20. Rh3 Qgd1# 0-1
+
+[Event "ReiLea vs SF"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish-10"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "28"]
+
+1. g3 e5 2. d4 exd4 3. Bg2 Bc5 4. Nf3 Nf6 5. Nc3 dxc3 6. e3 O-O 7. h4 d5 8. h5 Bb4 9. b3 h6 10. O-O Bg4 11. a4 Re8 12. Qe1 Bxf3 13. g4 Be4 14. f3 Bh7 15. f4 Ne4 16. f5 Kh8 17. f6 Nd7 18. Bf3 Ndxf6 19. Bb2 cxb2 20. Rb1 Bxe1 21. Rfxe1 Nxh5 22. gxh5 Ng3 23. Rxb2 Ne4 24. Kf1 Nd2+ 25. Kg2 Qg5+ 26. Kh2 Be4 27. Kh3 Bxf3 28. Rg1 Qf5+ 29. Kg3 Qg5+ 30. Kh2 Nf1+ 31. Rxf1 Qg2# 0-1
+
+[Event "ReiLea vs SF"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish-10"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "29"]
+
+1. g3 e5 2. d4 e4 3. Nc3 Bb4 4. d5 Qe7 5. Bg2 Bxc3+ 6. Qd2 Bxd2+ 7. Kxd2 d6 8. h4 e3+ 9. Kd3 Bf5+ 10. Kd4 Nc6+ 11. dxc6 Qe5+ 12. Kc4 b5+ 13. Kb4 Qc5+ 14. Kb3 Bxc2# 0-1
+
+[Event "ReiLea vs SF"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish-10"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "30"]
+
+1. g3 e5 2. d4 exd4 3. Bg2 Bb4+ 4. Nc3 dxc3 5. h4 cxb2+ 6. Qd2 Qf6 7. Nf3 Bxd2+ 8. Kxd2 Qd6+ 9. Ke1 bxa1=Q 10. c4 Qxc1# 0-1
+
+[Event "ReiLea vs SF"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish-10"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "31"]
+
+1. g3 e5 2. d4 exd4 3. Bg2 Bb4+ 4. Nc3 Qf6 5. Nf3 dxc3 6. h4 cxb2+ 7. Qd2 Bxd2+ 8. Kxd2 bxa1=Q 9. Kd3 Qd6+ 10. Ke4 Nf6+ 11. Kf5 Qc3 12. Be3 Qxc2+ 13. Kg5 h6# 0-1
+
+[Event "ReiLea vs SF"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish-10"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "32"]
+
+1. g3 e5 2. d4 exd4 3. Bg2 Bc5 4. Nf3 d5 5. h4 Nf6 6. Be3 dxe3 7. Nc3 exf2+ 8. Kd2 O-O 9. Kd3 Re8 10. Ne4 dxe4+ 11. Kc3 exf3 12. Qe1 fxe1=Q+ 13. Kc4 Qd4+ 14. Kb5 a6# 0-1
+
+[Event "ReiLea vs SF"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish-10"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "33"]
+
+1. g3 e5 2. d4 exd4 3. Bg2 Bb4+ 4. Nc3 dxc3 5. h4 cxb2+ 6. Qd2 bxc1=R+ 7. Rxc1 Bxd2+ 8. Kxd2 Nf6 9. Kd3 d6 10. Rh3 Ke7 11. g4 Nxg4 12. Rh1 c6 13. c4 Qa5 14. Rd1 Nxf2+ 15. Kc2 Qxa2+ 16. Kc3 Nxd1+ 17. Kb4 a5# 0-1
+
+[Event "Web Game"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "34"]
+
+1. g3 e5 2. d4 exd4 3. Bg2 d5 4. Nf3 c5 5. Nc3 dxc3 6. h4 h6 7. e3 Be7 8. b3 Nf6 9. O-O Nc6 10. Qe1 Ne4 11. Ng5 hxg5 12. g4 gxh4 13. Qd2 cxd2 14. c3 h3 15. Rb1 hxg2 16. f3 gxf1=R+ 17. Kxf1 d1=Q+ 18. Kg2 Qd6 19. Rb2 Qg3# 0-1
+
+[Event "Web Game"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "ReiLea"]
+[Black "Stockfish"]
+[Result "0-1"]
+[Termination "checkmate"]
+[GameID "35"]
+
+1. g3 e5 2. d4 exd4 3. Bg2 Nf6 4. Nc3 dxc3 5. Nf3 d5 6. e3 Be7 7. h4 O-O 8. Ng5 h6 9. b3 Re8 10. h5 Nc6 11. Rh3 hxg5 12. Qd2 cxd2+ 13. Kd1 Bxh3 14. a4 dxc1=Q+ 15. Kxc1 Bxg2 16. Kd1 Qc8 17. Ke1 Bb4+ 18. Kd1 Bc3 19. g4 Be4 20. Kc1 Qxg4 21. h6 Kh7 22. f3 Qg1# 0-1
+
+[Event "Web Game"]
+[Site "Local"]
+[Date "2026.03.07"]
+[Round "?"]
+[White "Human"]
+[Black "ReiLea"]
+[Result "1-0"]
+[Termination "checkmate"]
+[GameID "36"]
+
+1. e4 d6 2. Nf3 Nh6 3. Bc4 Be6 4. Bxe6 b6 5. Bc4 c6 6. d3 f5 7. exf5 g6 8. fxg6 Kd7 9. Ne5+ Kc8 10. Be6+ Kc7 11. Nxc6 Kxc6 12. Qf3+ Kb5 13. Bc4+ Kb4 14. a3+ Kc5 15. Qd5# 1-0
+

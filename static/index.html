@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chess RL</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #12100e;
+    --surface: #1c1916;
+    --surface2: #252119;
+    --border: #332d25;
+    --border-hover: #5a4e3a;
+    --gold: #c9a84c;
+    --gold-dim: #8a7a4a;
+    --text: #d4c8b0;
+    --text-dim: #7a6e5e;
+    --text-bright: #f0e6d2;
+    --light-sq: #c8b088;
+    --dark-sq: #8b6c4a;
+    --selected: #daa520;
+    --last-move-light: #d4c47a;
+    --last-move-dark: #a0924a;
+    --check: #b83a3a;
+    --legal-dot: rgba(0,0,0,0.22);
+    --legal-ring: rgba(0,0,0,0.25);
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+  }
+
+  #menu {
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  #menu .crown {
+    font-size: 64px;
+    filter: drop-shadow(0 0 24px rgba(201,168,76,0.3));
+    margin-bottom: 12px;
+  }
+
+  #menu h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: var(--gold);
+    font-weight: 400;
+    letter-spacing: 8px;
+    margin-bottom: 4px;
+  }
+
+  #menu .subtitle {
+    color: var(--text-dim);
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 48px;
+  }
+
+  .menu-btn {
+    display: block;
+    width: 300px;
+    margin: 0 auto 10px;
+    padding: 14px 20px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--gold-dim);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+    text-align: left;
+  }
+
+  .menu-btn:hover {
+    background: var(--surface2);
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  .menu-btn .icon { margin-right: 10px; font-size: 16px; }
+
+  .db-stats {
+    margin-top: 36px;
+    padding: 14px 20px;
+    border: 1px solid var(--border);
+    display: inline-block;
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+  }
+
+  #game {
+    display: none;
+    gap: 28px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    animation: fadeIn 0.4s ease;
+  }
+
+  #game.active { display: flex; }
+
+  .board-area { position: relative; }
+
+  .captured-row {
+    height: 26px;
+    margin: 4px 0;
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: #aaa;
+    min-height: 26px;
+  }
+
+  .board-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    width: 440px;
+    height: 440px;
+    border: 2px solid var(--border);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,168,76,0.05);
+  }
+
+  .square {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    font-size: 36px;
+    user-select: none;
+    transition: background 0.12s;
+  }
+
+  .square.light { background: var(--light-sq); }
+  .square.dark { background: var(--dark-sq); }
+  .square.selected { background: var(--selected) !important; }
+  .square.last-move.light { background: var(--last-move-light); }
+  .square.last-move.dark { background: var(--last-move-dark); }
+  .square.in-check { background: var(--check) !important; }
+
+  .square .piece {
+    line-height: 1;
+    pointer-events: none;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.4));
+    transition: transform 0.1s;
+  }
+
+  .square:hover .piece { transform: scale(1.05); }
+
+  .legal-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--legal-dot);
+    pointer-events: none;
+  }
+
+  .legal-ring {
+    position: absolute;
+    inset: 2px;
+    border-radius: 50%;
+    border: 3px solid var(--legal-ring);
+    pointer-events: none;
+  }
+
+  .coord {
+    position: absolute;
+    font-size: 10px;
+    font-weight: 700;
+    pointer-events: none;
+  }
+
+  .coord-rank { top: 2px; left: 3px; }
+  .coord-file { bottom: 1px; right: 3px; }
+  .square.light .coord { color: var(--dark-sq); }
+  .square.dark .coord { color: var(--light-sq); }
+
+  .sidebar { width: 250px; }
+
+  .status-bar {
+    padding: 12px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    margin-bottom: 12px;
+    font-size: 13px;
+  }
+
+  .status-bar.game-over {
+    background: #2a1a1a;
+    border-color: #4a2a2a;
+  }
+
+  .status-bar .label {
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .status-bar .check-badge {
+    color: var(--check);
+    margin-left: 8px;
+    font-weight: 600;
+  }
+
+  /* ── Move List ────────────────────── */
+  .move-list {
+    height: 300px;
+    overflow-y: auto;
+    background: #0d0b09;
+    border: 1px solid var(--border);
+    padding: 10px;
+    margin-bottom: 12px;
+    font-size: 13px;
+  }
+
+  .move-list::-webkit-scrollbar { width: 6px; }
+  .move-list::-webkit-scrollbar-track { background: transparent; }
+  .move-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+  .move-list .placeholder { color: var(--text-dim); font-style: italic; }
+
+  .move-row {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 2px;
+    line-height: 1.6;
+  }
+
+  .move-num { color: var(--text-dim); width: 32px; text-align: right; margin-right: 6px; }
+  .move-white { width: 70px; color: var(--text-bright); }
+  .move-black { width: 70px; color: var(--text-dim); }
+
+  /* ── Buttons ──────────────────────── */
+  .btn-stack { display: flex; flex-direction: column; gap: 6px; }
+
+  .btn {
+    padding: 9px 14px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-align: left;
+    transition: all 0.15s;
+  }
+
+  .btn:hover {
+    background: var(--surface2);
+    border-color: var(--border-hover);
+    color: var(--text);
+  }
+
+  .btn.accent { color: var(--gold); border-color: var(--gold-dim); }
+  .btn.accent:hover { border-color: var(--gold); background: rgba(201,168,76,0.08); }
+
+  .btn.small { font-size: 11px; padding: 7px 12px; }
+
+  .pgn-box {
+    margin-top: 12px;
+    padding: 10px;
+    background: #0d0b09;
+    border: 1px solid var(--border);
+    font-size: 11px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    max-height: 200px;
+    overflow-y: auto;
+    color: var(--text-dim);
+    display: none;
+  }
+
+  .pgn-box.visible { display: block; }
+
+  .promo-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .promo-overlay.active { display: flex; }
+
+  .promo-box {
+    background: var(--surface);
+    border: 1px solid var(--gold-dim);
+    padding: 20px;
+    text-align: center;
+  }
+
+  .promo-box h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold);
+    font-weight: 400;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+  }
+
+  .promo-pieces { display: flex; gap: 12px; justify-content: center; }
+
+  .promo-piece {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .promo-piece:hover {
+    border-color: var(--gold);
+    background: rgba(201,168,76,0.12);
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 740px) {
+    .board-grid { width: 320px; height: 320px; }
+    .square { width: 40px; height: 40px; font-size: 26px; }
+    .sidebar { width: 320px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="menu">
+  <div class="crown">♔</div>
+  <h1>CHESS RL</h1>
+  <p class="subtitle">Never Make The Same Mistake Twice</p>
+
+  <button class="menu-btn" onclick="startGame('pvp')">
+    <span class="icon">♔♚</span> Human vs Human
+  </button>
+  <button class="menu-btn" onclick="startGame('bot-black')">
+    <span class="icon">♔🤖</span> Play White vs Bot
+  </button>
+  <button class="menu-btn" onclick="startGame('bot-white')">
+    <span class="icon">🤖♚</span> Play Black vs Bot
+  </button>
+  <button class="menu-btn" onclick="startGame('reiLea-vs-sf')">
+    <span class="icon">🤖🤖</span> Watch ReiLea vs Stockfish
+  </button>
+
+  <div class="db-stats" id="db-stats">Loading database...</div>
+</div>
+
+<!-- ═══════════════ GAME ═══════════════ -->
+<div id="game">
+  <div class="board-area">
+    <div class="captured-row" id="captured-top"></div>
+    <div class="board-grid" id="board"></div>
+    <div class="captured-row" id="captured-bottom"></div>
+  </div>
+
+  <div class="sidebar">
+    <div class="status-bar" id="status-bar">
+      <span id="status-icon" style="font-size:18px;margin-right:6px">♔</span>
+      <span id="status-text">White to move</span>
+    </div>
+
+    <div class="move-list" id="move-list">
+      <span class="placeholder">No moves yet</span>
+    </div>
+
+    <div class="btn-stack">
+      <button class="btn" id="btn-resign" onclick="resignGame()">⚐ Resign</button>
+      <button class="btn" onclick="flipBoard()">↕ Flip Board</button>
+      <button class="btn" onclick="togglePGN()">⎙ Show PGN</button>
+      <button class="btn accent" onclick="downloadPGN()">↓ Download PGN</button>
+      <button class="btn" onclick="resetGame()">↻ New Game</button>
+      <button class="btn small" onclick="goToMenu()">← Menu</button>
+    </div>
+
+    <div class="pgn-box" id="pgn-box"></div>
+  </div>
+</div>
+
+<!-- ═══════════════ PROMOTION MODAL ════ -->
+<div class="promo-overlay" id="promo-overlay">
+  <div class="promo-box">
+    <h3>Promote Pawn</h3>
+    <div class="promo-pieces" id="promo-pieces"></div>
+  </div>
+</div>
+
+<script>
+// ─── State ────────────────────────────────
+const PIECES = { K:'♔',Q:'♕',R:'♖',B:'♗',N:'♘',P:'♙', k:'♚',q:'♛',r:'♜',b:'♝',n:'♞',p:'♟' };
+
+let gameId = null;
+let mode = null;
+let flipped = false;
+let selected = null;
+let legalMoves = [];
+let lastMove = null;
+let board = Array(64).fill(null);  // current piece positions
+let turn = 'white';
+let isCheck = false;
+let isGameOver = false;
+let moveHistory = [];
+let capturedWhite = [];
+let capturedBlack = [];
+let currentPGN = '';
+let pendingPromotion = null;
+
+// ─── API helpers ──────────────────────────
+const API = (path, opts = {}) =>
+  fetch(`/api${path}`, {
+    headers: { 'Content-Type': 'application/json' },
+    ...opts,
+  }).then(r => {
+    if (!r.ok) return r.json().then(e => { throw new Error(e.detail || 'Error'); });
+    return r.json();
+  });
+
+// ─── Init ─────────────────────────────────
+document.addEventListener('DOMContentLoaded', loadStats);
+
+async function loadStats() {
+  try {
+    const stats = await API('/db/stats');
+    const el = document.getElementById('db-stats');
+    if (stats.total_games > 0) {
+      el.textContent = `Database: ${stats.total_games} games · W:${stats.results?.['1-0']||0} B:${stats.results?.['0-1']||0} D:${stats.results?.['1/2-1/2']||0}`;
+    } else {
+      el.textContent = 'Database: 0 games stored';
+    }
+  } catch { document.getElementById('db-stats').textContent = 'Database: offline'; }
+}
+
+// ─── Game lifecycle ───────────────────────
+
+async function startGame(m) {
+  mode = m;
+  flipped = (m === 'bot-white');
+
+  const white = m === 'bot-white' ? 'ReiLea' : m === 'reiLea-vs-sf' ? 'ReiLea' : 'Human';
+  const black = m === 'bot-black' ? 'ReiLea' : m === 'reiLea-vs-sf' ? 'Stockfish' : 'Human';
+  const serverMode = m === 'bot-black' ? 'reiLea-black' : m === 'bot-white' ? 'reiLea-white' : m;
+
+  const data = await API('/game/new', {
+    method: 'POST',
+    body: JSON.stringify({ white, black, mode: serverMode }),
+  });
+
+  gameId = data.game_id;
+  legalMoves = data.legal_moves || [];
+  moveHistory = [];
+  capturedWhite = [];
+  capturedBlack = [];
+  lastMove = null;
+  selected = null;
+  isGameOver = false;
+  isCheck = false;
+  currentPGN = '';
+  turn = 'white';
+
+  parseFEN(data.fen);
+  showGame();
+  renderBoard();
+  renderMoves();
+  updateStatus();
+
+  // If bot plays first
+  if (mode === 'bot-white') {
+    setTimeout(doBotMove, 400);
+  }
+  if (mode === 'reiLea-vs-sf') {
+    startAutoPlay();
+  }
+}
+
+function resetGame() {
+  startGame(mode);
+}
+
+function goToMenu() {
+  document.getElementById('menu').style.display = '';
+  document.getElementById('game').classList.remove('active');
+  loadStats();
+}
+
+function showGame() {
+  document.getElementById('menu').style.display = 'none';
+  document.getElementById('game').classList.add('active');
+}
+
+// ─── FEN parsing ──────────────────────────
+
+function parseFEN(fen) {
+  const parts = fen.split(' ');
+  const placement = parts[0];
+  turn = parts[1] === 'w' ? 'white' : 'black';
+  board = Array(64).fill(null);
+  let sq = 0;
+  for (const ch of placement) {
+    if (ch === '/') continue;
+    if (ch >= '1' && ch <= '8') sq += parseInt(ch);
+    else board[sq++] = ch;
+  }
+}
+
+// ─── Board rendering ─────────────────────
+
+function renderBoard() {
+  const grid = document.getElementById('board');
+  grid.innerHTML = '';
+
+  // Find king in check
+  let kingCheckSq = -1;
+  if (isCheck) {
+    const kingChar = turn === 'white' ? 'K' : 'k';
+    kingCheckSq = board.indexOf(kingChar);
+  }
+
+  for (let i = 0; i < 64; i++) {
+    const idx = flipped ? (63 - i) : i;
+    const r = Math.floor(idx / 8);
+    const f = idx % 8;
+    const isLight = (r + f) % 2 === 0;
+    const piece = board[idx];
+
+    const sq = document.createElement('div');
+    sq.className = 'square ' + (isLight ? 'light' : 'dark');
+    sq.dataset.idx = idx;
+
+    // Highlight states
+    if (selected === idx) sq.classList.add('selected');
+    if (lastMove && (lastMove.from === idx || lastMove.to === idx)) sq.classList.add('last-move');
+    if (idx === kingCheckSq) sq.classList.add('in-check');
+
+    // Piece
+    if (piece) {
+      const span = document.createElement('span');
+      span.className = 'piece';
+      span.textContent = PIECES[piece] || '';
+      sq.appendChild(span);
+    }
+
+    // Legal move indicators
+    const isLegal = selected !== null && legalMovesForSelected().includes(idx);
+    if (isLegal && !piece) {
+      const dot = document.createElement('div');
+      dot.className = 'legal-dot';
+      sq.appendChild(dot);
+    }
+    if (isLegal && piece) {
+      const ring = document.createElement('div');
+      ring.className = 'legal-ring';
+      sq.appendChild(ring);
+    }
+
+    // Coordinates
+    const displayI = flipped ? (63 - i) : i;
+    if (i % 8 === 0) {
+      const coord = document.createElement('span');
+      coord.className = 'coord coord-rank';
+      coord.textContent = 8 - r;
+      sq.appendChild(coord);
+    }
+    if (Math.floor(i / 8) === 7) {
+      const coord = document.createElement('span');
+      coord.className = 'coord coord-file';
+      coord.textContent = String.fromCharCode(97 + f);
+      sq.appendChild(coord);
+    }
+
+    sq.addEventListener('click', () => onSquareClick(idx));
+    grid.appendChild(sq);
+  }
+
+  // Captured pieces
+  renderCaptured();
+}
+
+function renderCaptured() {
+  const top = document.getElementById('captured-top');
+  const bottom = document.getElementById('captured-bottom');
+  const w = capturedWhite.map(p => PIECES[p] || '').join('');
+  const b = capturedBlack.map(p => PIECES[p] || '').join('');
+  top.textContent = flipped ? b : w;
+  bottom.textContent = flipped ? w : b;
+}
+
+// ─── Legal moves for selected square ─────
+
+function legalMovesForSelected() {
+  if (selected === null) return [];
+  const fromName = sqName(selected);
+  return legalMoves
+    .filter(m => m.uci.substring(0, 2) === fromName)
+    .map(m => sqIdx(m.uci.substring(2, 4)));
+}
+
+function sqName(idx) {
+  return String.fromCharCode(97 + (idx % 8)) + (8 - Math.floor(idx / 8));
+}
+
+function sqIdx(name) {
+  return (8 - parseInt(name[1])) * 8 + (name.charCodeAt(0) - 97);
+}
+
+// ─── Click handling ───────────────────────
+
+function isWhitePiece(p) { return p && p === p.toUpperCase(); }
+function pieceColor(p) { return p ? (isWhitePiece(p) ? 'white' : 'black') : null; }
+
+function onSquareClick(idx) {
+  if (isGameOver) return;
+  const botTurn = (mode === 'bot-white' && turn === 'white') || (mode === 'bot-black' && turn === 'black');
+  if (botTurn) return;
+
+  const piece = board[idx];
+
+  if (selected !== null) {
+    const targets = legalMovesForSelected();
+    if (targets.includes(idx)) {
+      // Check for promotion
+      const fromPiece = board[selected];
+      const toRow = Math.floor(idx / 8);
+      if (fromPiece && fromPiece.toUpperCase() === 'P' && (toRow === 0 || toRow === 7)) {
+        showPromotion(selected, idx);
+        return;
+      }
+      doHumanMove(selected, idx);
+      return;
+    }
+    // Select different piece
+    if (piece && pieceColor(piece) === turn) {
+      selected = idx;
+      renderBoard();
+      return;
+    }
+    selected = null;
+    renderBoard();
+    return;
+  }
+
+  if (piece && pieceColor(piece) === turn) {
+    selected = idx;
+    renderBoard();
+  }
+}
+
+// ─── Promotion ────────────────────────────
+
+function showPromotion(from, to) {
+  pendingPromotion = { from, to };
+  const isW = turn === 'white';
+  const pieces = isW ? ['Q','R','B','N'] : ['q','r','b','n'];
+  const overlay = document.getElementById('promo-overlay');
+  const container = document.getElementById('promo-pieces');
+  container.innerHTML = '';
+  pieces.forEach(p => {
+    const btn = document.createElement('div');
+    btn.className = 'promo-piece';
+    btn.textContent = PIECES[p];
+    btn.onclick = () => {
+      overlay.classList.remove('active');
+      doHumanMove(pendingPromotion.from, pendingPromotion.to, p.toLowerCase());
+      pendingPromotion = null;
+    };
+    container.appendChild(btn);
+  });
+  overlay.classList.add('active');
+}
+
+// ─── Move execution ──────────────────────
+
+async function doHumanMove(from, to, promotion) {
+  let uci = sqName(from) + sqName(to);
+  if (promotion) uci += promotion;
+
+  try {
+    const data = await API(`/game/${gameId}/move`, {
+      method: 'POST',
+      body: JSON.stringify({ move: uci }),
+    });
+    applyMoveResult(data, from, to);
+
+    // Trigger bot response
+    if (!isGameOver && isBotTurn()) {
+      setTimeout(doBotMove, 350);
+    }
+  } catch (err) {
+    console.error('Move error:', err.message);
+  }
+}
+
+async function doBotMove() {
+  if (isGameOver || !gameId) return;
+  try {
+    const data = await API(`/game/${gameId}/bot-move`, { method: 'POST' });
+    const from = sqIdx(data.uci.substring(0, 2));
+    const to = sqIdx(data.uci.substring(2, 4));
+    applyMoveResult(data, from, to);
+  } catch (err) {
+    console.error('Bot error:', err.message);
+  }
+}
+
+function applyMoveResult(data, from, to) {
+  // Track captures
+  const captured = board[to];
+  if (captured) {
+    if (isWhitePiece(captured)) capturedWhite.push(captured);
+    else capturedBlack.push(captured);
+  }
+  // En passant capture detection (pawn moves diag to empty square)
+  const movingPiece = board[from];
+  if (movingPiece && movingPiece.toUpperCase() === 'P' && from % 8 !== to % 8 && !board[to]) {
+    const epSq = turn === 'white' ? to + 8 : to - 8;
+    const epPiece = board[epSq];
+    if (epPiece) {
+      if (isWhitePiece(epPiece)) capturedWhite.push(epPiece);
+      else capturedBlack.push(epPiece);
+    }
+  }
+
+  parseFEN(data.fen);
+  lastMove = { from, to };
+  selected = null;
+  isCheck = data.is_check || false;
+  isGameOver = data.is_game_over || false;
+  moveHistory = data.move_history || moveHistory;
+  legalMoves = data.legal_moves || [];
+  currentPGN = data.pgn || currentPGN;
+
+  renderBoard();
+  renderMoves();
+  updateStatus();
+
+  if (isGameOver) {
+    const result = data.result || (data.is_checkmate ? (turn === 'white' ? '0-1' : '1-0') : '1/2-1/2');
+    showGameOver(result, data.saved_game_id);
+  }
+}
+
+function isBotTurn() {
+  return (mode === 'bot-white' && turn === 'white') ||
+         (mode === 'bot-black' && turn === 'black') ||
+         mode === 'reiLea-vs-sf';
+}
+
+function startAutoPlay() {
+  if (isGameOver || !gameId) return;
+  setTimeout(async () => {
+    await doBotMove();
+    if (!isGameOver) startAutoPlay();
+  }, 1000);
+}
+
+// ─── UI Updates ───────────────────────────
+
+function updateStatus() {
+  const icon = document.getElementById('status-icon');
+  const text = document.getElementById('status-text');
+  const bar = document.getElementById('status-bar');
+  bar.classList.remove('game-over');
+
+  icon.textContent = turn === 'white' ? '♔' : '♚';
+  let t = `${turn === 'white' ? 'White' : 'Black'} to move`;
+  if (isCheck) t += ' · CHECK';
+  text.innerHTML = t;
+  if (isCheck) {
+    const badge = text.querySelector('.check-badge') || (() => {
+      text.innerHTML = `${turn === 'white' ? 'White' : 'Black'} to move <span class="check-badge">· CHECK</span>`;
+    })();
+  }
+}
+
+function showGameOver(result, savedId) {
+  const bar = document.getElementById('status-bar');
+  bar.classList.add('game-over');
+  const icon = document.getElementById('status-icon');
+  const text = document.getElementById('status-text');
+  icon.textContent = '⚑';
+  let msg = result === '1-0' ? 'White wins' : result === '0-1' ? 'Black wins' : 'Draw';
+  text.innerHTML = `<div class="label">Game Over</div>${msg} · ${result}`;
+  if (savedId) text.innerHTML += `<br><span style="font-size:11px;color:var(--text-dim)">Saved as game #${savedId}</span>`;
+  document.getElementById('btn-resign').style.display = 'none';
+}
+
+function renderMoves() {
+  const el = document.getElementById('move-list');
+  if (!moveHistory.length) {
+    el.innerHTML = '<span class="placeholder">No moves yet</span>';
+    return;
+  }
+  let html = '';
+  for (let i = 0; i < moveHistory.length; i += 2) {
+    const num = Math.floor(i / 2) + 1;
+    html += `<div class="move-row">
+      <span class="move-num">${num}.</span>
+      <span class="move-white">${moveHistory[i] || ''}</span>
+      <span class="move-black">${moveHistory[i + 1] || ''}</span>
+    </div>`;
+  }
+  el.innerHTML = html;
+  el.scrollTop = el.scrollHeight;
+}
+
+// ─── Actions ──────────────────────────────
+
+function flipBoard() {
+  flipped = !flipped;
+  renderBoard();
+}
+
+function togglePGN() {
+  const box = document.getElementById('pgn-box');
+  box.classList.toggle('visible');
+  box.textContent = currentPGN || '(no moves)';
+}
+
+function downloadPGN() {
+  const blob = new Blob([currentPGN || ''], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `chess_${new Date().toISOString().slice(0, 10)}_${gameId || 'game'}.pgn`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+async function resignGame() {
+  if (!gameId || isGameOver) return;
+  try {
+    const data = await API(`/game/${gameId}/resign`, { method: 'POST' });
+    isGameOver = true;
+    currentPGN = data.pgn || currentPGN;
+    showGameOver(data.result, data.saved_game_id);
+  } catch (err) {
+    console.error('Resign error:', err.message);
+  }
+}
+</script>
+</body>
+</html>

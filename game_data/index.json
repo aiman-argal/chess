@@ -1,0 +1,365 @@
+{
+  "games": [
+    {
+      "game_id": 1,
+      "white": "Human",
+      "black": "RandomBot",
+      "result": "1-0",
+      "date": "2026.02.08",
+      "eco": "",
+      "num_moves": 53,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 2,
+      "white": "Human",
+      "black": "RandomBot",
+      "result": "1-0",
+      "date": "2026.02.08",
+      "eco": "",
+      "num_moves": 31,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 3,
+      "white": "Human",
+      "black": "RandomBot",
+      "result": "1-0",
+      "date": "2026.02.08",
+      "eco": "",
+      "num_moves": 41,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 4,
+      "white": "Human",
+      "black": "Human",
+      "result": "1-0",
+      "date": "2026.02.08",
+      "eco": "",
+      "num_moves": 115,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 5,
+      "white": "RandomBot-W",
+      "black": "RandomBot-B",
+      "result": "1/2-1/2",
+      "date": "2026.02.08",
+      "eco": "",
+      "num_moves": 341,
+      "termination": "draw"
+    },
+    {
+      "game_id": 6,
+      "white": "RandomBot-W",
+      "black": "RandomBot-B",
+      "result": "1-0",
+      "date": "2026.02.08",
+      "eco": "",
+      "num_moves": 163,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 7,
+      "white": "RandomBot-W",
+      "black": "RandomBot-B",
+      "result": "1/2-1/2",
+      "date": "2026.02.08",
+      "eco": "",
+      "num_moves": 259,
+      "termination": "stalemate"
+    },
+    {
+      "game_id": 8,
+      "white": "RandomBot-W",
+      "black": "RandomBot-B",
+      "result": "1/2-1/2",
+      "date": "2026.02.08",
+      "eco": "",
+      "num_moves": 238,
+      "termination": "draw"
+    },
+    {
+      "game_id": 9,
+      "white": "RandomBot-W",
+      "black": "RandomBot-B",
+      "result": "1/2-1/2",
+      "date": "2026.02.08",
+      "eco": "",
+      "num_moves": 326,
+      "termination": "draw"
+    },
+    {
+      "game_id": 10,
+      "white": "Human",
+      "black": "ReiLea",
+      "result": "1-0",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 13,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 11,
+      "white": "ReiLea",
+      "black": "Human",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 60,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 12,
+      "white": "Human",
+      "black": "ReiLea",
+      "result": "1-0",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 37,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 13,
+      "white": "Human",
+      "black": "ReiLea",
+      "result": "1-0",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 35,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 14,
+      "white": "ReiLea",
+      "black": "Stockfish-10",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 22,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 15,
+      "white": "ReiLea",
+      "black": "Stockfish-10",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 26,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 16,
+      "white": "ReiLea",
+      "black": "Stockfish-10",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 36,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 17,
+      "white": "ReiLea",
+      "black": "Stockfish-10",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 28,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 18,
+      "white": "ReiLea",
+      "black": "Stockfish-10",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 26,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 19,
+      "white": "ReiLea",
+      "black": "Stockfish-10",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 26,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 20,
+      "white": "ReiLea",
+      "black": "Stockfish-10",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 44,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 21,
+      "white": "ReiLea",
+      "black": "Stockfish-10",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 26,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 22,
+      "white": "ReiLea",
+      "black": "Stockfish-10",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 24,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 23,
+      "white": "ReiLea",
+      "black": "Stockfish-10",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 24,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 24,
+      "white": "ReiLea",
+      "black": "Stockfish-10",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 52,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 25,
+      "white": "ReiLea",
+      "black": "Stockfish-10",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 58,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 26,
+      "white": "ReiLea",
+      "black": "Stockfish-10",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 34,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 27,
+      "white": "ReiLea",
+      "black": "Stockfish-10",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 40,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 28,
+      "white": "ReiLea",
+      "black": "Stockfish-10",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 62,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 29,
+      "white": "ReiLea",
+      "black": "Stockfish-10",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 28,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 30,
+      "white": "ReiLea",
+      "black": "Stockfish-10",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 20,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 31,
+      "white": "ReiLea",
+      "black": "Stockfish-10",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 26,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 32,
+      "white": "ReiLea",
+      "black": "Stockfish-10",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 28,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 33,
+      "white": "ReiLea",
+      "black": "Stockfish-10",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 34,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 34,
+      "white": "ReiLea",
+      "black": "Stockfish",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 38,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 35,
+      "white": "ReiLea",
+      "black": "Stockfish",
+      "result": "0-1",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 44,
+      "termination": "checkmate"
+    },
+    {
+      "game_id": 36,
+      "white": "Human",
+      "black": "ReiLea",
+      "result": "1-0",
+      "date": "2026.03.07",
+      "eco": "",
+      "num_moves": 29,
+      "termination": "checkmate"
+    }
+  ],
+  "total_games": 36
+}
